@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="gridContainer">
+        <header>
+            <div id="logo">
+                <a href="#">
+                <img src="../img/kygoLogo.png" alt="LogoKygo"></a>
+            </div>
+            <h1 class="mainTitle">KYGO</h1>
+            <h6 class="mainSubTitle">Contactalo!!</h6>
+            <div class="espacio"></div>
+            
+        </header>
+        <nav>
+            <ul class="menu flexible--row">
+                <li><a href="../index.html" >Inicio</a></li>
+                <li><a href="biografia.html" >Biografía</a></li>
+                <li><a href="musica.html" >Música</a></li>
+                <li><a href="conciertos.html" >Conciertos</a></li>
+                <li><a href="#" class= "actual">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section id="formulario" class="sect--blue contc flexible--rowWrap">
+                <h2 class="subTitle">Completá este formulario!</h2>
+                <form action="#" class="text contc__form">
+                    <div>
+                        <label for="nombre_apellido">Ingrese su nombre y apellido: </label><br>
+                        <input type="text" name="nombre_apellido" placeholder="Ej: José Pérez">
+                    </div>
+                    <div>
+                        <label for="correo">Ingrese su E-mail: </label><br>
+                        <input type="mail" name="correo" placeholder="Ej: ejemplo@mail.com">
+                    </div>
+                    <div>
+                        <p>¿En qué idioma vas a escribir?</p>
+                        <div>
+                            <span>Español</span>
+                            <input type="radio" name="idioma_mensaje" value="Español">
+                        </div>
+                        <div>
+                            <span>Inglés</span>
+                            <input type="radio" name="idioma_mensaje" value="Inglés">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="mensaje">Comenta lo que quieras decirle a Kygo: </label><br>
+                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Hola..."></textarea>  
+                    </div>   
+                    <div>
+                        <input type="checkbox" id="noticias">
+                        <label for="noticias">¿Quieres recibir las utlimas noticias de Kygo en tu mail?</label>
+                        
+                    </div>                         
+                        <input type="submit" value="Enviar" class="link link--green">  
+                        <input type="reset" value="Limpiar formulario" class="link link--green">  
+                </form>
+                <img src="../img/kygoContacto.jpg" alt="Kygo" class="contc__img">
+            </section>
+        </main>
+            
+    
+        <footer class="flexible--row">
+            <div id="logo" class="logo">
+                <a href="../index.html">
+                    <img src="../img/kygoLogo.png" alt="LogoKygo"></a>
+            </div>
+            <ul class="menu flexible--rowWrap">
+                <li><a href="https://www.youtube.com/c/KygoMusic/featured" target="blank">
+                    <img src="../img/youtubeLogo.png" alt="youtube - Kygo">
+                </a></li>
+                <li><a href="https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4" target="blank">
+                    <img src="../img/spotifyLogo.png" alt="Spotify - Kygo">
+                </a></li>
+                <li><a href="https://www.instagram.com/kygomusic/" target="blank">
+                    <img src="../img/instagLogo.png" alt="Instagram - Kygo">
+                </a></li>
+                <li><a href="https://twitter.com/kygomusic" target="blank">
+                    <img src="../img/twitterLogo.png" alt="Twitter - Kygo">
+                </a></li>  
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,869 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+/*General*/
+body{
+    background-color: #07091B;
+}
+
+a img{
+    height: 70px;
+    width: auto;
+    grid-area: logo;
+    transition: transform .5s;
+}
+a img:hover{
+    transform: scale(1.2,1.2);
+}
+
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+.gC--Ind{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas:"indBio"
+    "indImg"
+    "indMus"
+    "indCnr"
+    "indCnt";
+}
+
+.gC--Bio{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:"bioInf"
+    "bioCarr"
+    "bioPremYNom";
+}
+
+.gC--Mus{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header"
+    "nav"
+    "musTop"
+    "musDisc"
+    "footer";
+}
+
+.gC--Concie{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header"
+    "nav"
+    "concieProx"
+    "concieImgs"
+    "footer";
+}
+
+.flexible--row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexible--rowWrap{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flexible--column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexible--columnReverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flexible--columnWrap{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*header */
+header{
+    background-image: url(../img/kygoMTitleBackG.jpg);
+    background-position: left 40%;
+    background-size: cover;
+    color: #00CC99;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40% 40%;
+    grid-template-areas: "logo title"
+    "logo subtitle";
+    row-gap: 15px;
+    grid-area: header;
+}
+
+.mainTitle{
+    font-family: 'Playfair Display', serif;
+    font-size: 180%;
+    font-weight: lighter;
+    padding:1%;
+    width: 100%;
+    max-width: 180px;
+    text-transform: uppercase;
+    border: 3px solid #00CC99;
+    background-color: rgb(0, 0, 0, 0.75);
+    text-align: center;
+    grid-area: title;
+}
+.mainSubTitle{
+    font-size: 130%;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1%;
+    background-color: rgb(0, 0, 0, 0.75);
+    width: fit-content;
+    max-width:400px;
+    height: 30px;
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.espacio{
+    grid-area: espacio;
+}
+
+/* nav */
+
+nav{
+    width: 100%;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    grid-area: nav;
+}
+.menu {
+    background-color: #0A2347;
+    padding: 1%;
+    border-bottom: 10px groove #00CC99;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.menu li{
+    display: inline;
+}
+
+.menu li a{
+    color: #00CC99;
+    text-decoration: none;
+    padding: 7%;
+    border-radius: 10%;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50%;
+    transition: all .5s;
+}
+
+.menu li a:hover{
+    color: #1E9CA0;
+    background-color: #07091B;
+}
+
+.menu li a.actual{
+    color: #1E9CA0;
+    background-color: #07091B;
+    border-bottom: 3px solid #1E9CA0;
+}
+
+
+/*General Main*/
+
+.subTitle{
+    font-size: 150%;
+    font-family: 'Montserrat', serif;
+    font-style:italic;
+    text-transform: uppercase;
+    margin: 2%;
+    width: 100%;
+}
+
+.subTitle--smaller{
+    font-size: 150%;
+    text-align: center;
+    border-radius: 8%;
+}
+
+.text{
+    font-family: 'Montserrat', sans-serif;
+    padding: 2%;
+    margin: 2%;
+    font-size: 75%;
+}
+
+.text--justify{
+    text-align: justify;
+}
+
+.sect--blue {
+    padding: 1%;
+    color: #00CC99;
+}
+
+.sect--green{
+    padding: 1%;
+    color: #0A2347;
+    background-color: #00CC99;
+}
+
+.link{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 75%;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10%;
+    padding: 2%;
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+}
+
+.link--green{
+    color: #07091B;
+    background-color: #00CC99;
+    transition: color .5s, transform 1s;
+}
+
+.link--green:hover{
+    transform: scale(1.2,1.2);
+    color: #00CC99;
+    background-image: linear-gradient(90deg, #0A2347, #07091B);
+}
+
+.link--blue{
+    color: #00CC99;
+    background-color: #0A2347;
+    transition: color .5s, transform 1s;
+}
+
+.link--blue:hover{
+    transform: scale(1.2,1.2);
+    color: #07091B;
+    background-image: linear-gradient(90deg, #00CC99, #1E9CA0);
+}
+
+.table{
+    margin: 2%;
+    border-collapse: collapse;
+    width: 100%;
+    height: auto;
+}
+
+.table td,th{
+    border-top: 2px solid #07091B;
+    border-bottom: 2px solid #07091B;
+    padding: 1%;
+    background-color: rgb(10, 35, 71, 0.15);
+    text-align: center;
+}
+
+.table__td--fontfamily{
+    font-family: 'Playfair Display', serif;
+    font-size: 250%;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.table .tdPremYNom{
+    background-image:linear-gradient(90deg, #00CC99, rgb(10, 35, 71,0));
+}
+
+caption{
+    padding: 2%;
+    font-style: italic;
+    caption-side:bottom;
+}
+
+input,textarea{
+    background-color: #00CC99;
+    color: #0A2347;
+    border-radius: 5%;
+    border-color: #0A2347;
+    font-family: 'Montserrat', serif;
+    padding: 1%;
+}
+
+/* indexBio */
+
+.indexBio{
+    text-align: center;
+    align-items: center;
+    grid-area: indBio;
+}
+
+.indexBio__img{
+    padding: 2%;
+    background-color: rgb(0, 204, 153, 0.5);
+    margin: 1%;
+    border-radius: 25%;
+    height: 300px;
+    width: auto;
+}
+
+.indexBio__text{
+    width: fit-content;
+    background-color: rgb(0, 204, 153, 0.15);
+    border-radius: 6%;
+    display: inline-block;
+}
+/* indexImg */
+
+.index_img img{
+    width: 100vw;
+    height: 100%;
+}
+/* indexMus */
+.indexMus{
+    grid-area: indMus;
+    justify-content: center;
+}
+
+.indexOList{
+    list-style-position: inside;
+    list-style: none;
+    align-items: center;
+    margin: 2%;
+    width: 100vw;
+    height: auto;
+    background-color: rgb(10, 35, 71,0.15);
+}
+.indexOList li{
+    margin: 2% 0%;
+}
+
+.indexMus__img{
+    width: 90%;
+    height: auto;
+    margin: 2px;
+}
+
+.indexMus__link{
+    font-size: 100%;
+}
+/* indexConcie */
+
+.indexConcie{
+    background-image: url(../img/IndexConciBG.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-area: indCnr;
+}
+   
+
+
+.indexConcie__img{
+    width: auto;
+    height: auto;
+}
+.indexConcie__divCont{
+    width: auto;
+    background-color: rgb(10, 35, 71,0.15);
+    margin: 1%;
+    padding: 1%;
+}
+
+/*indexCnct*/
+
+.indexCntc{
+    justify-content: space-evenly;
+    grid-area: indCnt;
+}
+
+.indexCntc_div{
+    width: 50%;
+    justify-content: center;
+}
+
+.indexCntc_img{
+    width: 40%;
+}
+
+/* bioInf */
+
+
+.bioInf{
+    align-items: center;
+    grid-area: bioInf;
+}
+
+.bioInf h2{
+    align-self:flex-start;
+}
+
+.bioInf__img{
+    margin: 0% 0%;
+    padding: 2%;
+    background-color: rgb(10, 35, 71,0.3);
+    width: 70%;
+}
+
+.bioInf__text{
+    background-color: rgb(10, 35, 71,0.15);
+    border-radius: 7%;
+}
+/* bioCarr */
+
+.bioCarr{
+    background-image: url(../img/kygoBG4.jpg);
+    background-position: right;
+    background-size: cover;
+    grid-area: bioCarr;
+}
+.bioCarr__divs{
+    margin: 3%;
+    width: 40%;
+    height: auto; 
+    background-color: rgb(0, 204, 153, 0.15);
+}
+
+/* bioPremYNom */
+
+.bioPremYNom{
+    align-items: center;
+    text-align: right;
+    grid-area: bioPremYNom;
+}
+
+.bioPremYNom h2{
+    align-self: flex-end;
+}
+
+.bioPremYNom table{
+    font-size: 50%;
+}
+
+.bioPremYNom img {
+    width: 70%;
+    height: auto;
+    padding: 2%;
+    background-color: rgb(10, 35, 71,0.3);
+}
+
+/*musTop*/
+
+.musTop{
+    grid-area: musTop;
+}
+
+.musTop table{
+    font-size: 50%;
+}
+
+/* musDisc */
+
+.musDisc{
+    grid-area: musDisc;
+}
+
+.musSubTitle{
+    color: #00CC99;
+    background-image: linear-gradient(90deg, #07091B, #00CC99);
+    padding: 2%;
+}
+
+.musDisc article{
+    background-color: rgb(10, 35, 71,0.3);
+    align-items: center;
+    margin: 1%;
+    border-radius: 5%;
+}
+
+.musDisc article img{
+    width: 70%;
+    height:auto;
+    margin: 2%;
+}
+
+/* concierProx */
+.concieProx{
+    grid-area: concieProx;
+}
+
+.concieProx table{
+    width: 95%;
+    font-size: 50%;
+}
+.fontMod{
+    font-family: inherit;
+    font-size: 150%;
+    font-style: italic;
+}
+
+.fontMod span{
+    font-size: 70%;
+}
+/* concieImgs */
+.concieImgs{
+    text-align: center;
+    justify-content: center;
+    grid-area: concieImgs;
+}
+
+.concieImgs article {
+    margin: 1% 2%;
+    padding: 1%;
+    background-color: rgb(10, 35, 71,0.15);
+}
+
+.concieImgs article img{
+    width: 100%;
+    height: auto;
+}
+/* contc */
+
+.contc{
+    justify-content: center;
+    text-align: center;
+    grid-area: cntc;
+}
+
+.contc form{
+    background-color: rgb(10, 35, 71,0.15);
+    text-align: center;
+    width: 100%;
+}
+
+.contc img{
+    width: 60%;
+    height: auto;
+    padding: 0.5%;
+    border-radius: 3%;
+    background-color: #00CC99;
+}
+
+/* footer */
+footer {
+    background-color: #0A2347;
+    padding: 5%;
+    border-top: 10px groove #1E9CA0;
+    justify-content: space-between;
+    align-items: flex-end;
+    grid-area: footer;
+}
+
+footer .menu{
+    text-align: right;
+    border-bottom: none;
+    width: 30%;
+    height: fit-content;
+}
+
+footer .menu li{
+    margin: 4%;
+    width: 30%;
+}
+
+footer .menu img{
+    height: 25px;
+    width: 25px;
+    transition: transform .5s;
+}
+
+footer .menu li a:hover{
+    background-color:#0A2347;
+}
+
+footer a img{
+    height: 65px;
+}
+
+
+@media screen and (min-width: 420px) {
+    .mainTitle{
+        font-size: 230%;
+        max-width: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+/*header */
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: "logo title espacio"
+        "logo subtitle espacio";
+        row-gap: 15px;
+    }
+
+    .mainTitle{
+        font-size: 700%;
+        max-width: 500px;
+    }
+
+    .mainSubTitle{
+        font-size: 285%;
+        height: 70px;
+    }
+
+    a img{
+        height: 200px;
+    }
+
+    nav{
+        width: 100%;
+        position: sticky;
+        top:0px;
+        z-index: 1;
+        grid-area: nav;
+    }
+
+    .menu li a{
+        font-size: 100%;
+    }
+
+    /*General Main*/
+
+    .subTitle{
+        font-size: 300%;
+    }
+
+    .subTitle--smaller{
+        font-size: 200%;
+        text-align: left;
+    }
+
+    .text{
+        font-size: 100%;
+    }
+
+    .link{
+        font-size: 100%;
+    }
+
+    /* indexBio */
+
+    .indexBio{
+        flex-direction:row;
+        text-align: left;
+    }
+
+    /* indexMus */
+
+    .indexOList{
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+
+    .indexOList li{
+        width: 30%;
+        margin: 2% 0%;
+    }
+
+    .indexOList li p{
+        font-size:150%;
+        margin: 9% 0%;
+    }
+
+    .indexMus__img{
+        width: 60%;
+        margin: 10px;
+    }
+
+    
+
+    .indexMus__link{
+        font-size: 200%;
+    }
+
+     /* indexConcie */
+    
+    .indexConcie {
+        flex-flow: row wrap;
+    }
+
+    .indexConcie__img{
+        width: 50%;
+    }
+
+    .indexConcie__divCont{
+        width: 45%;
+        font-size: 100%;
+    }
+
+    /*indexCnct*/
+
+    .indexCntc_img{
+        width: 20%;
+    }
+
+    /* bioInf */
+    .bioInf{
+        flex-flow: row-reverse wrap;
+    }
+
+    .bioInf__img{
+        margin: 0% 0%;
+        padding: 2%;
+        background-color: rgb(10, 35, 71,0.3);
+        width: 35%;
+    }
+
+    .bioInf__text{
+        background-color: rgb(10, 35, 71,0.15);
+        border-radius: 7%;
+        width: 50%;
+    }
+
+    /* bioCarr */
+
+    .bioCarr__divs{
+        width: 25%;
+    }
+
+    /* bioPremYNom */
+
+    .bioPremYNom{
+        flex-flow: row wrap;
+    }
+
+    .bioPremYNom table{
+        width: 50%;
+        font-size: 70%;
+    }
+
+    .bioPremYNom img {
+        width: 40%;
+        height: auto;
+    }
+    /*musTop*/
+    .musTop table{
+        font-size: 100%;
+    }
+
+    .musDisc article{
+        flex-flow: row wrap;
+    }
+
+    .musDisc article iframe{
+        width: 50%;
+        height: 90%;
+    }
+
+    .musDisc article img{
+        width: 45%;
+    }
+
+    /*concieProx*/
+    .concieProx table{
+        font-size: 100%;
+    }
+
+    .fontMod{
+        font-size: 300%;
+    }
+
+    /* concieImgs */
+
+    .concieImgs article{
+        width: 40%;
+
+    }
+
+    /* contc */
+    .contc h2{
+        text-align: left;
+    }
+
+    .contc form{
+        width: 50%;
+        max-width: 500px;
+    }
+
+    .contc img{
+        width: 40%;
+        max-width: fit-content;
+    }
+
+    /* footer */
+
+    footer .menu{
+        flex-wrap: nowrap;
+    }
+
+    footer .menu img{
+        height: 50px;
+        width: 50px;
+    }
+
+    footer a img {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bioPremYNom table{
+        width: 45%;
+        font-size: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*header */
+
+    .menu li a{
+        font-size: 125%;
+    }
+
+    .mainSubTitle{
+        font-size: 300%;
+    }
+
+    .text{
+        font-size: 125%;
+    }
+
+    .link{
+        font-size: 125%;
+    }
+     /*General Main*/
+
+    .subTitle{
+        font-size: 350%;
+    }
+
+    .subTitle--smaller{
+        font-size: 200%;
+    }
+
+    /*musTop*/
+
+    .musTop table{
+        font-size: 125%;
+    }
+
+    /*concieProx*/
+    .concieProx table{
+        font-size: 125%;
+    }
+
+    .fontMod{
+        font-size: 300%;
+    }
+
+    .contc form{
+        width: 50%;
+        max-width: 700px;
+    }
+
+}
