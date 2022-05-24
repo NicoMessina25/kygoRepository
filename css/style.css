@@ -548,6 +548,16 @@ input,textarea{
     background-color: #00CC99;
 }
 
+input, textarea{
+    color: #1E9CA0;
+    background-color: #07091B;
+    border: 1px solid #00CC99;
+}
+
+input {
+    border-radius: 73px 73px 73px 73px;
+}
+
 /* footer */
 footer {
     background-color: #0A2347;
