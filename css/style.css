@@ -164,8 +164,8 @@ nav{
 .menu li a{
     color: #00CC99;
     text-decoration: none;
-    padding: 7%;
-    border-radius: 10%;
+    padding: 3% 15%;
+    border-radius: 73px 73px 73px 73px;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 50%;
@@ -180,7 +180,7 @@ nav{
 .menu li a.actual{
     color: #1E9CA0;
     background-color: #07091B;
-    border-bottom: 3px solid #1E9CA0;
+    border-bottom: 1px solid #1E9CA0;
 }
 
 
@@ -228,7 +228,7 @@ nav{
     font-weight: bolder;
     font-size: 75%;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 10%;
+    border-radius: 73px 73px 73px 73px;
     padding: 2%;
     text-align: center;
     width: fit-content;
@@ -628,6 +628,10 @@ footer a img{
 
     .menu li a{
         font-size: 100%;
+    }
+
+    .menu li a.actual{
+        border-bottom: 3px solid;
     }
 
     /*General Main*/
