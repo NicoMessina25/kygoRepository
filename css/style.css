@@ -600,7 +600,7 @@ footer .menu img{
     height: 25px;
     width: 25px;
     animation: none;
-    transition:  background-color .5s, transform .5s;
+    transition:  border .2s, transform .5s;
     padding: 10%;
     border-radius: 30%;
     background-image: linear-gradient(135deg, rgb(0, 204, 153, 0.3), #0A2347);
@@ -611,19 +611,19 @@ footer .menu img{
 }
 
 .youTube:hover{
-    background-color: #FF1414;
+    border: 2px solid #FF1414;
 }
 
 .spotify:hover{
-    background-color: #0eb36e;
+    border: 2px solid #0eb36e;
 }
 
 .twitter:hover{
-    background-color: #27dbcc;
+    border: 2px solid #27dbcc;
 }
 
 .instagram:hover{
-    background-color: #eb26ca;
+    border: 2px solid #eb26ca;
 }
 
 footer .menu li a:hover{
