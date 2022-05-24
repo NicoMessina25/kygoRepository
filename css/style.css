@@ -12,10 +12,16 @@ a img{
     height: 70px;
     width: auto;
     grid-area: logo;
-    transition: transform .5s;
+    animation: aniLogo .5s alternate infinite;
 }
-a img:hover{
-    transform: scale(1.2,1.2);
+
+@keyframes aniLogo {
+    from{
+        transform: translateY(3%);
+    }
+    to{
+        transform: translateY(0%) scale(1.05,1.05);
+    }
 }
 
 
@@ -169,7 +175,7 @@ nav{
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 50%;
-    transition: all .5s;
+    transition: all .2s;
 }
 
 .menu li a:hover{
@@ -192,7 +198,7 @@ nav{
     font-style:italic;
     text-transform: uppercase;
     margin: 2%;
-    width: 100%;
+    width: 90%;
 }
 
 .subTitle--smaller{
@@ -262,7 +268,7 @@ nav{
 .table{
     margin: 2%;
     border-collapse: collapse;
-    width: 100%;
+    width: 98%;
     height: auto;
 }
 
@@ -326,8 +332,9 @@ input,textarea{
 /* indexImg */
 
 .index_img img{
-    width: 100vw;
+    width: 100%;
     height: 100%;
+    grid-area: indImg;
 }
 /* indexMus */
 .indexMus{
@@ -476,6 +483,7 @@ input,textarea{
     color: #00CC99;
     background-image: linear-gradient(90deg, #07091B, #00CC99);
     padding: 2%;
+    border-radius: 73px 73px 73px 73px;
 }
 
 .musDisc article{
@@ -549,13 +557,21 @@ input,textarea{
 }
 
 input, textarea{
-    color: #1E9CA0;
+    color: #00CC99;
     background-color: #07091B;
     border: 1px solid #00CC99;
 }
 
 input {
     border-radius: 73px 73px 73px 73px;
+    transition: all .1s;
+}
+
+input:hover{
+    transform: scale(1.05,1.05);
+    color: #07091B;
+    background-image:linear-gradient(90deg, #00CC99, #1E9CA0); 
+    border: 1px solid #07091B;
 }
 
 /* footer */
@@ -583,7 +599,31 @@ footer .menu li{
 footer .menu img{
     height: 25px;
     width: 25px;
-    transition: transform .5s;
+    animation: none;
+    transition:  background-color .5s, transform .5s;
+    padding: 10%;
+    border-radius: 30%;
+    background-image: linear-gradient(135deg, rgb(0, 204, 153, 0.3), #0A2347);
+}
+
+.menu img:hover{
+    transform: scale(1.2,1.2);
+}
+
+.youTube:hover{
+    background-color: #FF1414;
+}
+
+.spotify:hover{
+    background-color: #0eb36e;
+}
+
+.twitter:hover{
+    background-color: #27dbcc;
+}
+
+.instagram:hover{
+    background-color: #eb26ca;
 }
 
 footer .menu li a:hover{
