@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Kygo - Inicio</title>
+    <link rel="icon" type="imgage/png" href="img/kygoLogoWeb.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,500;1,100;1,300;1,500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -13,7 +15,7 @@
 <body>
     <div class="gridContainer">
         <header>
-            <div id="logo" >
+            <div id="logo" class="row">
                 <a href="#" class="logo">
                 <img src="img/kygoLogo.png" alt="LogoKygo"></a>
             </div>
@@ -44,26 +46,26 @@
             <div id="indexImg" class="index_img">
                     <img src="img/kygoConcierBG2.jpg" alt="Kygo-Concierto" >
             </div>
-            <section id="musicaIndex" class="sect--green indexMus flexible--rowWrap">
+            <section id="musicaIndex" class="sect--green indexMus flexible--column">
                 <h2 class="subTitle">Top 5 Canciones</h2>
                 <ol class="text indexOList text--justify flexible--column">
-                    <li> <h3 class="subTitle--smaller">1. It Ain't Me</h3>
+                    <li> <h3 class="subTitle subTitle--smaller">1. It Ain't Me</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi beatae voluptatem nostrum iure aliquid provident dolores officiis eum obcaecati sed ea nisi accusamus necessitatibus, unde magnam repudiandae, et exercitationem consectetur</p>
                     </li>
                     <img src="img/itAintMeIndex.jpg" alt="Portada del la cancion 'It ain't Me' (Kygo y Selena Gomez)" class="indexMus__img">
-                    <li> <h3 class="subTitle--smaller">2. Firestone</h3>
+                    <li> <h3 class="subTitle subTitle--smaller">2. Firestone</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatem placeat fugiat mollitia quibusdam vero, suscipit laudantium tempora quos fugit nobis eos velit nihil pariatur molestiae expedita, quidem eum in.</p>
                     </li>
                     <img src="img/firestoneIndex.jpg" alt="Portada de la cancion 'Firestone' (Kygo y Conrad)" class="indexMus__img ">
-                    <li><h3 class="subTitle--smaller">3. Stole the Show</h3>
+                    <li><h3 class="subTitle subTitle--smaller">3. Stole the Show</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At eius sunt sint pariatur rem nihil suscipit nobis cupiditate incidunt magni animi voluptatibus mollitia, corporis molestias quis, a dolores doloribus odit.</p>
                     </li>
                     <img src="img/kygoStoleTheShow.jpg" alt="Portada de la cancion 'Stole the Show' (Kygo y Parson James)" class="indexMus__img ">
-                    <li><h3 class="subTitle--smaller">4. Higher Love</h3>
+                    <li><h3 class="subTitle subTitle--smaller">4. Higher Love</h3>
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet doloremque officiis libero ad culpa tempora nemo consequuntur, repudiandae, sint corporis veritatis voluptate quas, ex veniam vitae animi iusto at natus!</p>
                     </li>
                     <img src="img/higherLoveIndex.jpeg" alt="Portada de la cancion 'Higher Love' (Kygo y Whitney Houston)" class="indexMus__img">
-                    <li><h3 class="subTitle--smaller">5. Happy Now</h3>
+                    <li><h3 class="subTitle subTitle--smaller">5. Happy Now</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In fugiat ratione enim facilis. Officiis totam quia pariatur. Consequuntur perferendis autem aperiam quos, amet atque assumenda, repudiandae, ullam eligendi cupiditate ipsa.</p>
                     </li>
                     <img src="img/happyNowIndex.jpg" alt="Portada de la cancion 'Happy Now' (Kygo y Sandro Cavazza)" class="indexMus__img">
@@ -88,27 +90,33 @@
                 <img src="img/kygoContactoIndex.jpg" alt="Kygo" class="indexCntc_img">         
             </section>
         </main>
-        <footer class="flexible--row">
-            <div id="logo" class="logo">
-                <a href="#">
-                    <img src="img/kygoLogo.png" alt="LogoKygo"></a>
+        <footer class="container">
+            <div>
+                
             </div>
-            <ul class="menu flexible--rowWrap">
-                <li><a href="https://www.youtube.com/c/KygoMusic/featured" target="blank">
-                    <img src="img/youtubeLogo.png" alt="Youtube - Kygo" class="youTube">
-                </a></li>
-                <li><a href="https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4" target="blank">
-                    <img src="img/spotifyLogo.png" alt="Spotify - Kygo" class="spotify">
-                </a></li>
-                <li><a href="https://www.instagram.com/kygomusic/" target="blank">
-                    <img src="img/instagLogo.png" alt="Instagram - Kygo" class="instagram">
-                </a></li>
-                <li><a href="https://twitter.com/kygomusic" target="blank">
-                    <img src="img/twitterLogo.png" alt="Twitter - Kygo" class="twitter">
-                </a></li>                
-            </ul>
+            <div class="row">
+                <div id="logo" class="logo col-6">
+                    <a href="#">
+                        <img src="img/kygoLogo.png" alt="LogoKygo"></a>
+                </div>
+                <ul class="menu flexible--rowWrap col-6">
+                    <li><a href="https://www.youtube.com/c/KygoMusic/featured" target="blank">
+                        <img src="img/youtubeLogo.png" alt="Youtube - Kygo" class="youTube">
+                    </a></li>
+                    <li><a href="https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4" target="blank">
+                        <img src="img/spotifyLogo.png" alt="Spotify - Kygo" class="spotify">
+                    </a></li>
+                    <li><a href="https://www.instagram.com/kygomusic/" target="blank">
+                        <img src="img/instagLogo.png" alt="Instagram - Kygo" class="instagram">
+                    </a></li>
+                    <li><a href="https://twitter.com/kygomusic" target="blank">
+                        <img src="img/twitterLogo.png" alt="Twitter - Kygo" class="twitter">
+                    </a></li>                
+                </ul>
+            </div>
+                
         </footer>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
