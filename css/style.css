@@ -116,7 +116,7 @@ a img{
 
 /*header */
 header{
-    background-image: url(../img/kygoMTitleBackG2.jpg);
+    background-image: url(../img/kygoMTitleBackG.jpg);
     background-position: left 40%;
     background-size:cover;
     color: #00CC99;
@@ -168,12 +168,16 @@ nav{
     z-index: 1;
     grid-area: nav;
 }
-.menu {
+
+
+
+.menu{
     background-color: #0A2347;
     padding: 1%;
     border-bottom: 10px groove #00CC99;
     text-align: center;
     justify-content: space-evenly;
+    align-items: center;
     margin: 0;
 }
 
@@ -185,7 +189,9 @@ nav{
     color: #00CC99;
     text-decoration: none;
     padding: 3% 15%;
+    height: 25%;
     border-radius: 73px 73px 73px 73px;
+    border: none;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-size: 50%;
@@ -202,6 +208,41 @@ nav{
     background-color: #07091B;
     border-bottom: 1px solid #1E9CA0;
 }
+
+.dropdown-menu{
+    background-color: #07091B;
+}
+
+.btn-primary{
+    background-color:#0A2347;
+    border: none;
+    border-radius: 50%;
+    display: none;
+}
+
+.btn-sm{
+    padding: 0%;
+}
+
+.btn:focus{
+    box-shadow: none;
+    color: #1E9CA0;
+    background-color: #07091B;
+}
+
+.btn-primary:hover{
+    color: #1E9CA0;
+    background-color: #07091B;
+}
+
+
+
+.dropdown-menu li{
+    font-size: 70%;
+}
+
+
+
 
 
 /*General Main*/
@@ -309,6 +350,15 @@ nav{
 
 .table .tdPremYNom{
     background-image:linear-gradient(90deg, #00CC99, rgb(10, 35, 71,0));
+}
+
+.table-hover > tbody > tr:hover{
+    color: #1E9CA0;
+}
+
+.table-hover-dark tbody tr:hover{
+    color: #07091B;
+    background-color: rgb(7, 9, 27,0.05);
 }
 
 caption{
@@ -560,6 +610,10 @@ input,textarea{
     background-color: rgb(10, 35, 71,0.15);
 }
 
+.concieImgs .card-header{
+    background-color: rgb(10, 35, 71,0.15);
+}
+
 .concieImgs article img{
     width: 100%;
     height: auto;
@@ -581,15 +635,14 @@ input,textarea{
     background-color: rgb(10, 35, 71,0.15);
     text-align: center;
     width: 100%;
+    font-size: 70%;
 }
 
-.contc img{
-    width: 60%;
-    height: auto;
-    padding: 0.5%;
-    border-radius: 3%;
-    background-color: #00CC99;
+.contc form p{
+    margin: 0;
 }
+
+
 
 input, textarea{
     color: #00CC99;
@@ -609,10 +662,40 @@ input:hover{
     border: 1px solid #07091B;
 }
 
+.form-check{
+    justify-content: center;
+    align-items: center;
+}
+
+.form-check-input{
+    background-color:#00CC99;
+    margin: 0% 1%;
+}
+
+.form-check-input:focus{
+    box-shadow: none;
+    border-color: #00CC99;
+}
+
+.form-check-input:checked{
+    background-color:#07091B;
+    border-color: #00CC99
+}
+
+.contc img{
+    width: 60%;
+    height: auto;
+    padding: 0.5%;
+    border-radius: 3%;
+    background-color: #00CC99;
+}
+
 /* footer */
 footer {
     background-color: #0A2347;
     padding: 5%;
+    font-family: 'Montserrat', serif;
+    font-size: 50%;
     border-top: 10px groove #1E9CA0;
     justify-content: space-between;
     align-items: flex-end;
@@ -622,13 +705,11 @@ footer {
 footer .menu{
     text-align: right;
     border-bottom: none;
-    width: 30%;
     height: fit-content;
 }
 
 footer .menu li{
     margin: 4%;
-    width: 30%;
 }
 
 footer .menu img{
@@ -717,6 +798,15 @@ footer a img{
 
     .menu li a.actual{
         border-bottom: 3px solid;
+    }
+
+    .menu .rightBorder{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .btn-primary{
+        display: inline-block;
     }
 
     /*General Main*/
@@ -886,6 +976,7 @@ footer a img{
     .contc form{
         width: 50%;
         max-width: 500px;
+        font-size: 100%;
     }
 
     .contc img{
@@ -894,6 +985,10 @@ footer a img{
     }
 
     /* footer */
+
+    footer{
+        font-size: 100%;
+    }
 
     footer .menu{
         flex-wrap: nowrap;

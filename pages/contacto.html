@@ -27,9 +27,40 @@
         <nav>
             <ul class="menu flexible--row">
                 <li><a href="../index.html" >Inicio</a></li>
-                <li><a href="biografia.html" >Biografía</a></li>
-                <li><a href="musica.html" >Música</a></li>
-                <li><a href="conciertos.html" >Conciertos</a></li>
+                <li>
+                    <div class="btn-group">
+                        <a href="biografia.html" class="rightBorder">Biografía</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="biografia.html#infancia">Niñez</a></li>
+                          <li><a class="dropdown-item" href="biografia.html#carrera">Carrera</a></li>
+                          <li><a class="dropdown-item" href="biografia.html#premiosNominaciones">Premios</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <a href="musica.html" class="rightBorder">Música</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="musica.html#topCanciones">Top Canciones</a></li>
+                          <li><a class="dropdown-item" href="musica.html#discografia">Discografía</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <a href="conciertos.html" class="rightBorder">Conciertos</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="conciertos.html#conciertosProx">Próximos</a></li>
+                          <li><a class="dropdown-item" href="conciertos.html#imgConciertos">Imágenes</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="#" class= "actual">Contacto</a></li>
             </ul>
         </nav>
@@ -47,23 +78,34 @@
                     </div>
                     <div>
                         <p>¿En qué idioma vas a escribir?</p>
-                        <div>
-                            <span>Español</span>
-                            <input type="radio" name="idioma_mensaje" value="Español">
+                        <div class="form-check flexible--row">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Español
+                            </label>
                         </div>
-                        <div>
+                        <div class="form-check flexible--row">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Inglés
+                            </label>
+                        </div> 
+                        <!-- <div>
                             <span>Inglés</span>
                             <input type="radio" name="idioma_mensaje" value="Inglés">
-                        </div>
+                        </div> -->
                     </div>
                     <div>
                         <label for="mensaje">Comenta lo que quieras decirle a Kygo: </label><br>
                         <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Hola..."></textarea>  
                     </div>   
                     <div>
-                        <input type="checkbox" id="noticias">
-                        <label for="noticias">¿Quieres recibir las utlimas noticias de Kygo en tu mail?</label>
-                        
+                        <div class="form-check flexible--row">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                ¿Quieres recibir las utlimas noticias de Kygo en tu mail?
+                            </label>
+                          </div>                        
                     </div>                         
                         <input type="submit" value="Enviar" class="">  
                         <input type="reset" value="Limpiar formulario" class="">  
@@ -73,25 +115,30 @@
         </main>
             
     
-        <footer class="flexible--row">
-            <div id="logo" class="logo">
-                <a href="../index.html">
-                    <img src="../img/kygoLogo.png" alt="LogoKygo"></a>
-            </div>
-            <ul class="menu flexible--rowWrap">
-                <li><a href="https://www.youtube.com/c/KygoMusic/featured" target="blank">
-                    <img src="../img/youtubeLogo.png" alt="youtube - Kygo" class="youTube">
-                </a></li>
-                <li><a href="https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4" target="blank">
-                    <img src="../img/spotifyLogo.png" alt="Spotify - Kygo" class="spotify">
-                </a></li>
-                <li><a href="https://www.instagram.com/kygomusic/" target="blank">
-                    <img src="../img/instagLogo.png" alt="Instagram - Kygo" class="instagram">
-                </a></li>
-                <li><a href="https://twitter.com/kygomusic" target="blank">
-                    <img src="../img/twitterLogo.png" alt="Twitter - Kygo" class="twitter">
-                </a></li>  
-            </ul>
+        <footer class="container green">
+            <article class="row">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi nam magnam tempora eum quos dolorem perspiciatis unde, nobis at soluta fuga consectetur id inventore. Error est sapiente culpa dignissimos soluta.</p>
+            </article>
+            <article class="row">
+                <div id="logo" class="logo col-6">
+                    <a href="../index.html">
+                        <img src="../img/kygoLogo.png" alt="LogoKygo"></a>
+                </div>
+                <ul class="menu flexible--rowWrap col-6">
+                    <li><a href="https://www.youtube.com/c/KygoMusic/featured" target="blank">
+                        <img src="../img/youtubeLogo.png" alt="youtube - Kygo" class="youTube">
+                    </a></li>
+                    <li><a href="https://open.spotify.com/artist/23fqKkggKUBHNkbKtXEls4" target="blank">
+                        <img src="../img/spotifyLogo.png" alt="Spotify - Kygo" class="spotify">
+                    </a></li>
+                    <li><a href="https://www.instagram.com/kygomusic/" target="blank">
+                        <img src="../img/instagLogo.png" alt="Instagram - Kygo" class="instagram">
+                    </a></li>
+                    <li><a href="https://twitter.com/kygomusic" target="blank">
+                        <img src="../img/twitterLogo.png" alt="Twitter - Kygo" class="twitter">
+                    </a></li>   
+                </ul>
+            </article>
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

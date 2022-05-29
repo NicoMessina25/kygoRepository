@@ -25,10 +25,43 @@
         </header>
         <nav>
             <ul class="menu flexible--row">
-                <li><a href="#" class="actual">Inicio</a></li>
-                <li><a href="pages/biografia.html" >Biografía</a></li>
-                <li><a href="pages/musica.html" >Música</a></li>
-                <li><a href="pages/conciertos.html" >Conciertos</a></li>
+                <li>
+                    <a href="#" class="actual">Inicio</a>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <a href="pages/biografia.html" class="rightBorder">Biografía</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="pages/biografia.html#infancia">Niñez</a></li>
+                          <li><a class="dropdown-item" href="pages/biografia.html#carrera">Carrera</a></li>
+                          <li><a class="dropdown-item" href="pages/biografia.html#premiosNominaciones">Premios</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <a href="pages/musica.html" class="rightBorder">Música</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="pages/musica.html#topCanciones">Top Canciones</a></li>
+                          <li><a class="dropdown-item" href="pages/musica.html#discografia">Discografía</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn-group">
+                        <a href="pages/conciertos.html" class="rightBorder">Conciertos</a>
+                        <button type="button" class="btn btn-primary green dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="pages/conciertos.html#conciertosProx">Próximos</a></li>
+                          <li><a class="dropdown-item" href="pages/conciertos.html#imgConciertos">Imágenes</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="pages/contacto.html" >Contacto</a></li>
             </ul>
         </nav>
@@ -90,11 +123,11 @@
                 <img src="img/kygoContactoIndex.jpg" alt="Kygo" class="indexCntc_img">         
             </section>
         </main>
-        <footer class="container">
-            <div>
-                
-            </div>
-            <div class="row">
+        <footer class="container green">
+            <article class="row">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi nam magnam tempora eum quos dolorem perspiciatis unde, nobis at soluta fuga consectetur id inventore. Error est sapiente culpa dignissimos soluta.</p>
+            </article>
+            <article class="row">
                 <div id="logo" class="logo col-6">
                     <a href="#">
                         <img src="img/kygoLogo.png" alt="LogoKygo"></a>
@@ -112,9 +145,8 @@
                     <li><a href="https://twitter.com/kygomusic" target="blank">
                         <img src="img/twitterLogo.png" alt="Twitter - Kygo" class="twitter">
                     </a></li>                
-                </ul>
-            </div>
-                
+                </ul>                  
+            </article>  
         </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
