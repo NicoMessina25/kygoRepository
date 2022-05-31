@@ -81,6 +81,10 @@ a img{
     "footer";
 }
 
+.row{
+    width: 95%;
+}
+
 .flexible--row{
     display: flex;
     flex-direction: row;
@@ -512,11 +516,11 @@ input,textarea{
     justify-content: center;
 }
 .bioCarr__divs{
-    margin: 3%;
-    width: 40%;
     height: auto; 
     background-color: rgb(0, 204, 153, 0.15);
+    margin: 1%;
 }
+
 
 /* bioPremYNom */
 
@@ -901,12 +905,6 @@ footer a img{
         background-color: rgb(10, 35, 71,0.15);
         border-radius: 7%;
         width: 50%;
-    }
-
-    /* bioCarr */
-
-    .bioCarr__divs{
-        width: 25%;
     }
 
     /* bioPremYNom */
