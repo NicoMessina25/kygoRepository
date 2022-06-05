@@ -8,10 +8,6 @@ body{
     background-color: #07091B;
 }
 
-img:hover{
-    transform: scale(1.05,1.05);
-}
-
 a img{
     height: 70px;
     width: auto;
@@ -85,6 +81,10 @@ a img{
     "footer";
 }
 
+.row{
+    width: 95%;
+}
+
 .flexible--row{
     display: flex;
     flex-direction: row;
@@ -138,7 +138,6 @@ header{
     font-size: 180%;
     font-weight: lighter;
     padding:1%;
-    margin-top: 1%;
     width: 100%;
     max-width: 180px;
     text-transform: uppercase;
@@ -206,11 +205,6 @@ nav{
 .menu li a:hover{
     color: #1E9CA0;
     background-color: #07091B;
-}
-
-.menu li a:active{
-    background-color: #1E9CA0;
-    color: #07091B;
 }
 
 .menu li a.actual{
@@ -331,17 +325,12 @@ nav{
     background-image: linear-gradient(90deg, #00CC99, #1E9CA0);
 }
 
-.link--green:active, .link--blue:active{
-    transform: scale(1,1);
-}
-
 .table{
     margin: 2%;
     border-collapse: collapse;
     width: 98%;
     height: auto;
 }
-
 
 .table td,th{
     border-top: 2px solid #07091B;
@@ -376,8 +365,6 @@ nav{
     background-color: rgb(7, 9, 27,0.05);
 }
 
-
-
 caption{
     padding: 2%;
     font-style: italic;
@@ -408,7 +395,6 @@ input,textarea{
     border-radius: 25%;
     height: 300px;
     width: auto;
-    transition: all .5s;
 }
 
 .indexBio__text{
@@ -454,7 +440,6 @@ input,textarea{
     width: 90%;
     height: auto;
     margin: 2px;
-    transition: all .5s;
 }
 
 .indexMus__link{
@@ -474,7 +459,6 @@ input,textarea{
 .indexConcie__img{
     width: auto;
     height: auto;
-    transition: all .5s;
 }
 .indexConcie__divCont{
     width: auto;
@@ -497,7 +481,6 @@ input,textarea{
 
 .indexCntc_img{
     width: 40%;
-    transition: all .5s;
 }
 
 /* bioInf */
@@ -517,7 +500,6 @@ input,textarea{
     padding: 2%;
     background-color: rgb(10, 35, 71,0.3);
     width: 70%;
-    transition: all .5s;
 }
 
 .bioInf__text{
@@ -534,21 +516,11 @@ input,textarea{
     justify-content: center;
 }
 .bioCarr__divs{
-    margin: 3%;
-    width: 40%;
-    height: auto;
+    height: auto; 
     background-color: rgb(0, 204, 153, 0.15);
-    transition: all .5s;
+    margin: 1%;
 }
 
-.bioCarr__divs:nth-child(odd){
-    color: #1E9CA0; 
-    background-color: rgb(30, 156, 160, 0.15);
-}
-
-.bioCarr__divs:hover{
-    transform: scale(1.4,1.4);
-}
 
 /* bioPremYNom */
 
@@ -571,7 +543,6 @@ input,textarea{
     height: auto;
     padding: 2%;
     background-color: rgb(10, 35, 71,0.3);
-    transition: all .5s;
 }
 
 /*musTop*/
@@ -609,7 +580,6 @@ input,textarea{
     width: 70%;
     height:auto;
     margin: 2%;
-    transition: all .5s;
 }
 
 /* concierProx */
@@ -696,7 +666,6 @@ input:hover{
     border: 1px solid #07091B;
 }
 
-
 .form-check{
     justify-content: center;
     align-items: center;
@@ -723,7 +692,6 @@ input:hover{
     padding: 0.5%;
     border-radius: 3%;
     background-color: #00CC99;
-    transition: all .5s;
 }
 
 /* footer */
@@ -752,14 +720,10 @@ footer .menu img{
     height: 25px;
     width: 25px;
     animation: none;
-    transition: all .5s;
+    transition:  border .2s, transform .5s;
     padding: 10%;
     border-radius: 30%;
     background-image: linear-gradient(135deg, rgb(0, 204, 153, 0.3), #0A2347);
-}
-
-.menu img:active{
-    padding: 15%;
 }
 
 .menu img:hover{
@@ -767,19 +731,19 @@ footer .menu img{
 }
 
 .youTube:hover{
-    box-shadow: 2px 2px 5px 1px #FF1414;
+    border: 2px solid #FF1414;
 }
 
 .spotify:hover{
-    box-shadow: 2px 2px 5px 1px #0eb36e;
+    border: 2px solid #0eb36e;
 }
 
 .twitter:hover{
-    box-shadow: 2px 2px 5px 1px #27dbcc;
+    border: 2px solid #27dbcc;
 }
 
 .instagram:hover{
-    box-shadow: 2px 2px 5px 1px #eb26ca;
+    border: 2px solid #eb26ca;
 }
 
 footer .menu li a:hover{
@@ -941,12 +905,6 @@ footer a img{
         background-color: rgb(10, 35, 71,0.15);
         border-radius: 7%;
         width: 50%;
-    }
-
-    /* bioCarr */
-
-    .bioCarr__divs{
-        width: 25%;
     }
 
     /* bioPremYNom */
