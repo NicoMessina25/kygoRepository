@@ -1,0 +1,111 @@
+nav{
+    width: 100%;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    grid-area: nav;
+}
+
+
+
+.menu{
+    background-color: $primary;
+    padding: 1%;
+    border-bottom: 10px groove $secondary;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    li{
+        display: inline;
+        a{
+        color: $secondary;
+        text-decoration: none;
+        padding: 3% 15%;
+        height: 25%;
+        border-radius: 73px 73px 73px 73px;
+        border: none;
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 50%;
+        transition: all .2s;
+
+        &:hover{
+            color: $darkerSecondary;
+            background-color: $darkerPrimary;
+        }
+        
+        &:active{
+            background-color: $darkerSecondary;
+            color: $darkerPrimary;
+        }
+
+        }
+        
+        .actual{
+            color: $darkerSecondary;
+            background-color: $darkerPrimary;
+            border-bottom: 1px solid $darkerPrimary;
+        }
+    }
+}
+
+.dropdown-menu{
+    background-color: $darkerPrimary;
+    li{
+        font-size: 70%;
+    }
+}
+
+.btn-primary{
+    background-color:$primary;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    &:hover{
+        color: $darkerSecondary;
+        background-color: $darkerPrimary;
+    }
+}
+
+.btn-sm{
+    padding: 0%;
+}
+
+.btn{
+    &:focus{
+    box-shadow: none;
+    color: $darkerSecondary;
+    background-color: $darkerPrimary;
+}
+}
+
+@media screen and (min-width: 768px){
+    nav{
+        width: 100%;
+        position: sticky;
+        top:0px;
+        z-index: 1;
+        grid-area: nav;
+    }
+
+    .menu{
+        li{
+            a{
+                font-size: 100%;
+            }
+            .actual{
+                border-bottom: 3px solid;
+            }
+        }
+        
+        .rightBorder{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    .btn-primary{
+        display: inline-block;
+    }
+}

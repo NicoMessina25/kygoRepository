@@ -1,0 +1,969 @@
+@import 'colors', 'footer','nav','fontFamilies';
+
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+/*General*/
+body{
+    background-color: $darkerPrimary;
+}
+
+img{
+    &:hover{
+    transform: scale(1.05,1.05);
+    }
+}
+
+a{
+    img{
+    height: 70px;
+    width: auto;
+    grid-area: logo;
+    animation: aniLogo .5s alternate infinite;
+    }
+} 
+
+@keyframes aniLogo {
+    from{
+        transform: translateY(3%);
+    }
+    to{
+        transform: translateY(0%) scale(1.05,1.05);
+    }
+}
+
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header"
+    "nav"
+    "main"
+    "footer";
+}
+
+.container{
+    max-width: none;
+}
+
+.gC--Ind{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas:"indBio"
+    "indImg"
+    "indMus"
+    "indCnr"
+    "indCnt";
+}
+
+.gC--Bio{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas:"bioInf"
+    "bioCarr"
+    "bioPremYNom";
+}
+
+.gC--Mus{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header"
+    "nav"
+    "musTop"
+    "musDisc"
+    "footer";
+}
+
+.gC--Concie{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas: "header"
+    "nav"
+    "concieProx"
+    "concieImgs"
+    "footer";
+}
+
+.flexible--row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flexible--rowWrap{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flexible--column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexible--columnReverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flexible--columnWrap{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.green{
+    color: $secondary;
+}
+
+.blue{
+    color: $primary;
+}
+
+/*header */
+header{
+    background-image: url(../img/kygoMTitleBackG.jpg);
+    background-position: left 40%;
+    background-size:cover;
+    color: $secondary;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 40% 40%;
+    grid-template-areas: "logo title"
+    "logo subtitle";
+    row-gap: 15px;
+    grid-area: header;
+}
+
+.mainTitle{
+    font-family: $secondaryFont;
+    font-size: 180%;
+    font-weight: lighter;
+    padding:1%;
+    margin-top: 2%;
+    width: 100%;
+    max-width: 180px;
+    text-transform: uppercase;
+    border: 3px solid $secondary;
+    background-color: $blackTransp;
+    text-align: center;
+    grid-area: title;
+}
+.mainSubTitle{
+    font-size: 130%;
+    font-family: $primaryFont;
+    padding: 1%;
+    font-weight: bold;
+    background-color: $blackTransp;
+    width: fit-content;
+    max-width:400px;
+    height: 30px;
+    grid-area: subtitle;
+    text-align: center;
+}
+
+.espacio{
+    grid-area: espacio;
+}
+
+/*General Main*/
+
+.subTitle{
+    font-size: 150%;
+    font-family: $primaryFont;
+    font-style:italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 2%;
+    width: 90%;
+}
+
+.subTitle--smaller{
+    text-align: center;
+    font-size: 150%;
+    text-transform: capitalize;
+}
+
+.text{
+    font-family: $primaryFont;
+    padding: 2%;
+    margin: 2%;
+    font-size: 75%;
+    a{
+        text-decoration:none;
+        font-style: italic;
+        transition: all .5s;
+        &:hover{
+            font-size: 105%;
+        }
+        &:visited{
+            color: $visited;
+            text-decoration: underline;
+        }
+    }
+}
+
+.text--justify{
+    text-align: justify;
+}
+
+.sect--blue {
+    padding: 1%;
+    color: $secondary;
+    p{
+        a{
+            color: $secondary;
+            &:hover{
+                color: $darkerSecondary;          
+            }
+        }
+    }
+}
+
+.sect--green{
+    padding: 1%;
+    color: $primary;
+    background-color: $secondary;
+    p{
+        a{
+            color: $primary;
+            &:hover{
+                color: $darkerPrimary;
+            }
+        }
+    }
+} 
+
+.link{
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 75%;
+    font-family: $primaryFont;
+    border-radius: 73px 73px 73px 73px;
+    padding: 2%;
+    text-align: center;
+    width: fit-content;
+    align-self: center;
+}
+
+.link--green{
+    color: $darkerPrimary;
+    background-color: $secondary;
+    transition: color .5s, transform 1s;
+
+    &:hover{
+        transform: scale(1.2,1.2);
+        color: $secondary;
+        background-image: linear-gradient(90deg, $primary, $darkerPrimary);
+    }
+
+    &:active{
+        transform: scale(1,1);
+    }
+}
+
+.link--blue{
+    color: $secondary;
+    background-color: $primary;
+    transition: color .5s, transform 1s;
+
+    &:hover{
+        transform: scale(1.2,1.2);
+        color: $darkerPrimary;
+        background-image: linear-gradient(90deg, $secondary, $darkerSecondary);
+    }
+
+    &:active{
+        transform: scale(1,1);
+    }
+}
+
+.table{
+    margin: 2%;
+    border-collapse: collapse;
+    width: 98%;
+    height: auto;
+
+    td,th{
+        border-top: 2px solid $darkerPrimary;
+        border-bottom: 2px solid $darkerPrimary;
+        padding: 1%;
+        background-color: $primaryTransp;
+        text-align: center;
+    }
+
+    th{
+        border-bottom: 2px solid $secondary;
+        border-top: 2px solid $secondary;
+    }
+
+    .tdPremYNom{
+        background-image:linear-gradient(90deg, $secondary, $transp0);
+    }
+
+    .tdFontfamily{
+        font-family: $secondaryFont;
+        font-size: 250%;
+        font-style: italic;
+        font-weight: bolder;
+    }
+} 
+
+
+
+.table-hover{
+    tbody{
+       tr{
+         &:hover{
+            color: $darkerSecondary;
+            }  
+       }
+    }  
+} 
+
+
+.table-hover-dark{
+    tbody{
+        tr{
+            &:hover{
+                color: $darkerPrimary;
+                background-color: $darkerPrimaryTransp;
+                }  
+        } 
+    } 
+}
+caption{
+    padding: 2%;
+    font-style: italic;
+    caption-side:bottom;
+}
+
+/* indexBio */
+
+.indexBio{
+    text-align: center;
+    align-items: center;
+    grid-area: indBio;
+}
+
+.indexBio__img{
+    padding: 1%;
+    background-color: $secondary;
+    margin: 1%;
+    border-radius: 25%;
+    height: 300px;
+    width: auto;
+    transition: all .5s;
+}
+
+.indexBio__text{
+    width: fit-content;
+    background-color: $secondaryTransp;
+    border-radius: 6%;
+    display: inline-block;
+    
+}
+/* indexImg */
+
+.index_img{
+   img{
+    width: 100%;
+    height: 100%;
+    grid-area: indImg;
+    transition: all .5s;
+
+    &:hover{
+        transform: scale(1.01,1.01);
+        }
+    } 
+} 
+
+/* indexMus */
+.indexMus{
+    grid-area: indMus;
+    align-items: center;
+}
+
+.indexOList{
+    list-style-position: inside;
+    list-style: none;
+    align-items: center;
+    margin: 2%;
+    width: 100vw;
+    max-width: 400px;
+    height: auto;
+    background-color: $primaryTransp;
+    li{
+        margin: 2% 0%;
+    }
+}
+
+.indexMus__img{
+    width: 90%;
+    height: auto;
+    margin: 2px;
+    transition: all .5s;
+}
+
+.indexMus__link{
+    font-size: 100%;
+}
+/* indexConcie */
+
+.indexConcie{
+    background-image: url(../img/IndexConciBG.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-area: indCnr;
+}
+   
+
+
+.indexConcie__img{
+    width: auto;
+    height: auto;
+    transition: all .5s;
+}
+.indexConcie__divCont{
+    width: auto;
+    background-color: $primaryTransp;
+    margin: 1%;
+    padding: 1%;
+}
+
+/*indexCnct*/
+
+.indexCntc{
+    justify-content: space-evenly;
+    grid-area: indCnt;
+}
+
+.indexCntc_div{
+    width: 50%;
+    justify-content: center;
+}
+
+.indexCntc_img{
+    width: 40%;
+    transition: all .5s;
+}
+
+/* bioInf */
+
+
+.bioInf{
+    align-items: center;
+    grid-area: bioInf;
+    h2{
+        align-self:flex-start;
+    }
+}
+
+.bioInf__img{
+    margin: 0% 0%;
+    padding: 2%;
+    background-color: $primaryTransp;
+    width: 70%;
+    transition: all .5s;
+}
+
+.bioInf__text{
+    background-color: $primaryTransp;
+    border-radius: 7%;
+}
+/* bioCarr */
+
+.bioCarr{
+    background-image: url(../img/kygoBG4.jpg);
+    background-position: right;
+    background-size: cover;
+    grid-area: bioCarr;
+    justify-content: center;
+}
+.bioCarr__divs{
+    margin: 3%;
+    width: 40%;
+    height: auto;
+    background-color: $secondaryTransp;
+    transition: all .5s;
+
+    &:nth-child(odd){
+        color: $darkerSecondary; 
+        background-color: $darkerSecondaryTransp;
+    }
+
+    &:hover{
+        transform: scale(1.1,1.1);
+    }
+}
+
+/* bioPremYNom */
+
+.bioPremYNom{
+    align-items: center;
+    text-align: right;
+    grid-area: bioPremYNom;
+
+    h2{
+        align-self: flex-end;
+    }
+
+    table{
+        font-size: 50%;
+    }
+
+    img {
+        width: 70%;
+        height: auto;
+        padding: 2%;
+        background-color: $primaryTransp;
+        transition: all .5s;
+    }
+} 
+
+/*musTop*/
+
+.musTop{
+    grid-area: musTop;
+    align-items: center;
+    table{
+        font-size: 50%;
+    }
+}
+
+/* musDisc */
+
+.musDisc{
+    grid-area: musDisc;
+
+    article{
+        background-color: $primaryTransp;
+        align-items: center;
+        margin: 1%;
+        border-radius: 5%;
+
+        img{
+            width: 70%;
+            height:auto;
+            margin: 2%;
+            transition: all .5s;
+        }
+    }
+}
+
+.musSubTitle{
+    color: $secondary;
+    background-image: linear-gradient(90deg, $darkerPrimary, $secondary);
+    padding: 2%;
+    border-radius: 73px 73px 73px 73px;
+}
+
+/* concierProx */
+.concieProx{
+    grid-area: concieProx;
+    align-items: center;
+    table{
+        width: 95%;
+        font-size: 50%;
+    }
+}
+
+.fontMod{
+    font-family: inherit;
+    font-size: 150%;
+    font-style: italic;
+    span{
+        font-size: 70%;
+    }
+}
+
+
+/* concieImgs */
+.concieImgs{
+    text-align: center;
+    justify-content: center;
+    grid-area: concieImgs;
+
+    article {
+        margin: 1% 2%;
+        padding: 1%;
+        background-color: $primaryTransp;
+
+        img{
+            width: 100%;
+            height: auto;
+            transition: all .5s;
+
+            &:hover{
+                transform: scale(1.02,1.02);
+            }
+        }
+    }
+
+    .card-header{
+        background-color: $primaryTransp;
+    }
+}
+/* contc */
+
+.contc{
+    justify-content: center;
+    text-align: center;
+    grid-area: cntc;
+
+    form{
+        background-color: $primaryTransp;
+        text-align: center;
+        width: 100%;
+        font-size: 70%;
+        p{
+            margin: 0;
+        }
+    }
+
+    img{
+        width: 60%;
+        height: auto;
+        padding: 0.5%;
+        border-radius: 3%;
+        background-color: $secondary;
+        transition: all .5s;
+    }
+}
+
+
+input, textarea{
+    color: $secondary;
+    background-color: $darkerPrimary;
+    border: 1px solid $secondary;
+    border-radius: 5%;
+    font-family: $primaryFont;
+    padding: 1%;
+}
+
+input {
+    border-radius: 73px 73px 73px 73px;
+    transition: all .1s;
+    &:hover{
+        transform: scale(1.05,1.05);
+        color: $darkerPrimary;
+        background-image:linear-gradient(90deg, $secondary, $darkerSecondary); 
+        border: 1px solid $darkerPrimary;
+    }
+}
+
+
+.form-check{
+    justify-content: center;
+    align-items: center;
+}
+
+.form-check-input{
+    background-color:$secondary;
+    margin: 0% 1%;
+    &:focus{
+        box-shadow: none;
+        border-color: $secondary;
+    }
+    &:checked{
+        background-color:$darkerPrimary;
+        border-color: $secondary;
+    }
+}
+
+
+
+@media screen and (min-width: 420px) {
+    .mainTitle{
+        font-size: 230%;
+        max-width: 250px;
+        min-height: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+/*header */
+    header{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 60% 40%;
+        grid-template-areas: "logo title espacio"
+        "logo subtitle espacio";
+        row-gap: 15px;
+    }
+
+    .mainTitle{
+        font-size: 700%;
+        max-width: 500px;
+    }
+
+    .mainSubTitle{
+        font-size: 285%;
+        height: 70px;
+    }
+
+    a{
+        img{
+            height: 200px;
+        }
+    } 
+
+    /*General Main*/
+
+    .subTitle{
+        font-size: 300%;
+    }
+
+    .subTitle--smaller{
+        font-size: 150%;
+        text-align: left;
+    }
+
+    .text{
+        font-size: 100%;
+    }
+
+    .link{
+        font-size: 100%;
+    }
+
+    /* indexBio */
+
+    .indexBio{
+        flex-direction:row;
+        text-align: left;
+    }
+
+    /* indexMus */
+
+    .indexOList{
+        flex-flow: row wrap;
+        justify-content: space-around;
+        max-width: 900px;
+        li{
+            width: 50%;
+            margin: 2% 0%;
+            font-size: 75%;
+
+            p{
+                font-size:150%;
+                margin: 9% 0%;
+            }
+        }
+    }
+
+    .indexMus__img{
+        width: 40%;
+        margin: 10px;
+    }
+
+    .indexMus__link{
+        font-size: 200%;
+    }
+
+     /* indexConcie */
+    
+    .indexConcie {
+        flex-flow: row wrap;
+    }
+
+    .indexConcie__img{
+        width: 50%;
+    }
+
+    .indexConcie__divCont{
+        width: 45%;
+        font-size: 100%;
+    }
+
+    /*indexCnct*/
+
+    .indexCntc_img{
+        width: 20%;
+    }
+
+    /* bioInf */
+    .bioInf{
+        flex-flow: row-reverse wrap;
+        justify-content: center;
+    }
+
+    .bioInf__img{
+        width: 35%;
+    }
+
+    .bioInf__text{
+        width: 50%;
+    }
+
+    /* bioCarr */
+
+    .bioCarr__divs{
+        width: 25%;
+        &:hover{
+            transform: scale(1.4,1.4);
+        }
+    }
+
+    /* bioPremYNom */
+
+    .bioPremYNom{
+        flex-flow: row wrap;
+        justify-content: center;
+        table{
+            width: 50%;
+            font-size: 70%;
+        }
+        img {
+            width: 40%;
+            height: auto;
+        }
+    } 
+
+    /*musTop*/
+    .musTop{
+        table{
+            font-size: 90%;
+            max-width: 70%;
+        }
+    } 
+
+    .musDisc{
+        article{
+            flex-flow: row wrap;
+            iframe{
+                width: 50%;
+                height: 90%;
+            }
+            img{
+                width: 45%;
+            }
+        }
+    }   
+
+    /*concieProx*/
+    .concieProx{
+        table{
+            font-size: 90%;
+            max-width: 70%;
+        }
+    }   
+
+    .fontMod{
+        font-size: 250%;
+    }
+
+    /* concieImgs */
+
+    .concieImgs{
+        h2{
+            text-align: right;
+        }
+    }   
+
+    .concieImgs{
+        h3{
+            text-align: center;
+        }
+        article{
+            width: 40%;
+        }
+    }   
+
+    /* contc */
+    .contc{
+        h2{
+            text-align: left;
+        }
+        form{
+            width: 50%;
+            max-width: 500px;
+            font-size: 100%;
+        } 
+        img{
+            width: 40%;
+            max-width: fit-content;
+        }
+    }
+
+    /* footer */
+
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .bioPremYNom{
+        table{
+            width: 45%;
+            font-size: 100%;
+        }
+    } 
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    /*header */
+
+    .menu{
+        li{
+            a{
+                font-size: 125%;
+            }
+        }
+    }
+
+    .mainSubTitle{
+        font-size: 300%;
+    }
+
+    .text{
+        font-size: 125%;
+    }
+
+    .link{
+        font-size: 125%;
+    }
+     /*General Main*/
+
+    .subTitle{
+        font-size: 350%;
+    }
+
+    .subTitle--smaller{
+        font-size: 200%;
+    }
+
+    /*musTop*/
+
+    .musTop{
+        table{
+            font-size: 100%;
+        }
+    } 
+
+    /*concieProx*/
+    .concieProx{
+        table{
+            font-size: 100%;
+        }
+    } 
+
+    .fontMod{
+        font-size: 250%;
+    }
+
+    .contc{
+        form{
+            width: 50%;
+            max-width: 700px;
+        }
+    } 
+
+}
