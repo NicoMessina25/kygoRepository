@@ -229,7 +229,7 @@ header{
         a{
             color: map-get($mainCol, secondary);
             &:hover{
-                color: map-get($mainCol, darkerSecondary);          
+                color: lighten(map-get($mainCol, darkerSecondary), 20%);          
             }
         }
     }
