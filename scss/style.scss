@@ -1,14 +1,33 @@
 @import 'colors', 'footer','nav','fontFamilies';
 
+@mixin sizes ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin marPad($mar, $pad) {
+    margin: $mar;
+    padding: $pad;
+}
+
+@mixin colAndBGCol($col, $BGCol){
+    color: $col;
+    background-color: $BGCol;
+}
+
+@mixin fonts($fami, $size, $weight) {
+    font-family: $fami;
+    font-size: $size;
+    font-weight: $weight;
+}
 
 *{
-    margin:0;
-    padding: 0;
+    @include marPad(0,0);
 }
 
 /*General*/
 body{
-    background-color: $darkerPrimary;
+    background-color: map-get($mainCol, darkerPrimary);
 }
 
 img{
@@ -19,8 +38,7 @@ img{
 
 a{
     img{
-    height: 70px;
-    width: auto;
+    @include sizes(auto, 70px);
     grid-area: logo;
     animation: aniLogo .5s alternate infinite;
     }
@@ -118,11 +136,11 @@ a{
 }
 
 .green{
-    color: $secondary;
+    color: map-get($mainCol, secondary);
 }
 
 .blue{
-    color: $primary;
+    color: map-get($mainCol, primary);
 }
 
 /*header */
@@ -130,7 +148,7 @@ header{
     background-image: url(../img/kygoMTitleBackG.jpg);
     background-position: left 40%;
     background-size:cover;
-    color: $secondary;
+    color: map-get($mainCol, secondary);
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 40% 40%;
@@ -141,28 +159,22 @@ header{
 }
 
 .mainTitle{
-    font-family: $secondaryFont;
-    font-size: 180%;
-    font-weight: lighter;
-    padding:1%;
-    margin-top: 2%;
-    width: 100%;
+    @include fonts($secondaryFont, 180%, lighter);
+    @include marPad(2% 0% 0% 0%, 1%);
+    @include sizes(100%, auto);
     max-width: 180px;
     text-transform: uppercase;
-    border: 3px solid $secondary;
-    background-color: $blackTransp;
+    border: 3px solid map-get($mainCol, secondary);
+    background-color: map-get($colTransp, blackTransp);
     text-align: center;
     grid-area: title;
 }
 .mainSubTitle{
-    font-size: 130%;
-    font-family: $primaryFont;
     padding: 1%;
-    font-weight: bold;
-    background-color: $blackTransp;
-    width: fit-content;
+    @include fonts($primaryFont, 130%, bold);
+    background-color: map-get($colTransp, blackTransp);
     max-width:400px;
-    height: 30px;
+    @include sizes(fit-content, 30px);
     grid-area: subtitle;
     text-align: center;
 }
@@ -174,26 +186,23 @@ header{
 /*General Main*/
 
 .subTitle{
-    font-size: 150%;
-    font-family: $primaryFont;
     font-style:italic;
-    font-weight: bold;
+    @include fonts($primaryFont, 150%, bold);
     text-transform: uppercase;
     margin: 2%;
     width: 90%;
 }
 
 .subTitle--smaller{
+    @extend.subTitle;
     text-align: center;
     font-size: 150%;
     text-transform: capitalize;
 }
 
 .text{
-    font-family: $primaryFont;
-    padding: 2%;
-    margin: 2%;
-    font-size: 75%;
+    @include marPad(2%, 2%);
+    @include fonts($primaryFont, 75%, inherit);
     a{
         text-decoration:none;
         font-style: italic;
@@ -209,17 +218,18 @@ header{
 }
 
 .text--justify{
+    @extend.text;
     text-align: justify;
 }
 
 .sect--blue {
     padding: 1%;
-    color: $secondary;
+    color: map-get($mainCol, secondary);
     p{
         a{
-            color: $secondary;
+            color: map-get($mainCol, secondary);
             &:hover{
-                color: $darkerSecondary;          
+                color: map-get($mainCol, darkerSecondary);          
             }
         }
     }
@@ -227,13 +237,12 @@ header{
 
 .sect--green{
     padding: 1%;
-    color: $primary;
-    background-color: $secondary;
+    @include colAndBGCol(map-get($mainCol, primary), map-get($mainCol, secondary));
     p{
         a{
-            color: $primary;
+            color: map-get($mainCol, primary);
             &:hover{
-                color: $darkerPrimary;
+                color: map-get($mainCol, darkerPrimary);
             }
         }
     }
@@ -241,9 +250,7 @@ header{
 
 .link{
     text-decoration: none;
-    font-weight: bolder;
-    font-size: 75%;
-    font-family: $primaryFont;
+    @include fonts($primaryFont, 75%, bolder);
     border-radius: 73px 73px 73px 73px;
     padding: 2%;
     text-align: center;
@@ -252,14 +259,14 @@ header{
 }
 
 .link--green{
-    color: $darkerPrimary;
-    background-color: $secondary;
+    @extend.link;
+    @include colAndBGCol(map-get($mainCol, darkerPrimary) , map-get($mainCol, secondary));
     transition: color .5s, transform 1s;
 
     &:hover{
         transform: scale(1.2,1.2);
-        color: $secondary;
-        background-image: linear-gradient(90deg, $primary, $darkerPrimary);
+        color: map-get($mainCol, secondary);
+        background-image: linear-gradient(90deg, map-get($mainCol, primary), map-get($mainCol, darkerPrimary));
     }
 
     &:active{
@@ -268,14 +275,14 @@ header{
 }
 
 .link--blue{
-    color: $secondary;
-    background-color: $primary;
+    @extend.link;
+    @include colAndBGCol(map-get($mainCol, secondary), map-get($mainCol, primary));
     transition: color .5s, transform 1s;
 
     &:hover{
         transform: scale(1.2,1.2);
-        color: $darkerPrimary;
-        background-image: linear-gradient(90deg, $secondary, $darkerSecondary);
+        color: map-get($mainCol, darkerPrimary);
+        background-image: linear-gradient(90deg, map-get($mainCol, secondary), map-get($mainCol, darkerSecondary));
     }
 
     &:active{
@@ -286,31 +293,28 @@ header{
 .table{
     margin: 2%;
     border-collapse: collapse;
-    width: 98%;
-    height: auto;
+    @include sizes(98%, auto);
 
     td,th{
-        border-top: 2px solid $darkerPrimary;
-        border-bottom: 2px solid $darkerPrimary;
+        border-top: 2px solid map-get($mainCol, darkerPrimary);
+        border-bottom: 2px solid map-get($mainCol, darkerPrimary);
         padding: 1%;
-        background-color: $primaryTransp;
+        background-color: map-get($colTransp, primaryTransp);
         text-align: center;
     }
 
     th{
-        border-bottom: 2px solid $secondary;
-        border-top: 2px solid $secondary;
+        border-bottom: 2px solid map-get($mainCol, secondary);
+        border-top: 2px solid map-get($mainCol, secondary);
     }
 
     .tdPremYNom{
-        background-image:linear-gradient(90deg, $secondary, $transp0);
+        background-image:linear-gradient(90deg, map-get($mainCol, secondary), map-get($colTransp, transp0));
     }
 
     .tdFontfamily{
-        font-family: $secondaryFont;
-        font-size: 250%;
         font-style: italic;
-        font-weight: bolder;
+        @include fonts($secondaryFont, 250%, bolder);
     }
 } 
 
@@ -320,7 +324,7 @@ header{
     tbody{
        tr{
          &:hover{
-            color: $darkerSecondary;
+            color: map-get($mainCol, darkerSecondary);
             }  
        }
     }  
@@ -331,8 +335,7 @@ header{
     tbody{
         tr{
             &:hover{
-                color: $darkerPrimary;
-                background-color: $darkerPrimaryTransp;
+                @include colAndBGCol(map-get($mainCol, darkerPrimary), map-get($colTransp, darkerPrimaryTransp));
                 }  
         } 
     } 
@@ -352,18 +355,17 @@ caption{
 }
 
 .indexBio__img{
-    padding: 1%;
-    background-color: $secondary;
-    margin: 1%;
+    background-color: map-get($mainCol, secondary);
+    @include marPad(1%, 1%);
     border-radius: 25%;
-    height: 300px;
-    width: auto;
+    @include sizes(auto, 300px);
     transition: all .5s;
 }
 
 .indexBio__text{
+    @extend.text--justify;
     width: fit-content;
-    background-color: $secondaryTransp;
+    background-color: map-get($colTransp, secondaryTransp);
     border-radius: 6%;
     display: inline-block;
     
@@ -372,8 +374,7 @@ caption{
 
 .index_img{
    img{
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
     grid-area: indImg;
     transition: all .5s;
 
@@ -394,23 +395,22 @@ caption{
     list-style: none;
     align-items: center;
     margin: 2%;
-    width: 100vw;
     max-width: 400px;
-    height: auto;
-    background-color: $primaryTransp;
+    @include sizes(100vw, auto);
+    background-color: map-get($colTransp, primaryTransp);
     li{
         margin: 2% 0%;
     }
 }
 
 .indexMus__img{
-    width: 90%;
-    height: auto;
+    @include sizes(90%, auto);
     margin: 2px;
     transition: all .5s;
 }
 
 .indexMus__link{
+    @extend.link--blue;
     font-size: 100%;
 }
 /* indexConcie */
@@ -425,15 +425,13 @@ caption{
 
 
 .indexConcie__img{
-    width: auto;
-    height: auto;
+    @include sizes(auto, auto);
     transition: all .5s;
 }
 .indexConcie__divCont{
     width: auto;
-    background-color: $primaryTransp;
-    margin: 1%;
-    padding: 1%;
+    background-color: map-get($colTransp, primaryTransp);
+    @include marPad(1%, 1%)
 }
 
 /*indexCnct*/
@@ -465,15 +463,15 @@ caption{
 }
 
 .bioInf__img{
-    margin: 0% 0%;
-    padding: 2%;
-    background-color: $primaryTransp;
+    @include marPad(0% 0%, 2%);
+    background-color: map-get($colTransp, primaryTransp);
     width: 70%;
     transition: all .5s;
 }
 
 .bioInf__text{
-    background-color: $primaryTransp;
+    @extend.text--justify;
+    background-color: map-get($colTransp, primaryTransp);
     border-radius: 7%;
 }
 /* bioCarr */
@@ -487,14 +485,12 @@ caption{
 }
 .bioCarr__divs{
     margin: 3%;
-    width: 40%;
-    height: auto;
-    background-color: $secondaryTransp;
+    @include sizes(40%, auto);
+    background-color: map-get($colTransp, secondaryTransp);
     transition: all .5s;
 
     &:nth-child(odd){
-        color: $darkerSecondary; 
-        background-color: $darkerSecondaryTransp;
+        @include colAndBGCol(map-get($mainCol, darkerSecondary), map-get($colTransp, darkerSecondaryTransp));
     }
 
     &:hover{
@@ -518,10 +514,9 @@ caption{
     }
 
     img {
-        width: 70%;
-        height: auto;
+        @include sizes(70%, auto);
         padding: 2%;
-        background-color: $primaryTransp;
+        background-color: map-get($colTransp, primaryTransp);
         transition: all .5s;
     }
 } 
@@ -542,14 +537,13 @@ caption{
     grid-area: musDisc;
 
     article{
-        background-color: $primaryTransp;
+        background-color: map-get($colTransp, primaryTransp);
         align-items: center;
         margin: 1%;
         border-radius: 5%;
 
         img{
-            width: 70%;
-            height:auto;
+            @include sizes(70%, auto);
             margin: 2%;
             transition: all .5s;
         }
@@ -557,8 +551,9 @@ caption{
 }
 
 .musSubTitle{
-    color: $secondary;
-    background-image: linear-gradient(90deg, $darkerPrimary, $secondary);
+    @extend.subTitle--smaller;
+    color: map-get($mainCol, secondary);
+    background-image: linear-gradient(90deg, map-get($mainCol, darkerPrimary), map-get($mainCol, secondary));
     padding: 2%;
     border-radius: 73px 73px 73px 73px;
 }
@@ -574,9 +569,8 @@ caption{
 }
 
 .fontMod{
-    font-family: inherit;
-    font-size: 150%;
     font-style: italic;
+    @include fonts(inherit, 150%, inherit);
     span{
         font-size: 70%;
     }
@@ -590,13 +584,11 @@ caption{
     grid-area: concieImgs;
 
     article {
-        margin: 1% 2%;
-        padding: 1%;
-        background-color: $primaryTransp;
+        @include marPad(1% 2%, 1%);
+        background-color: map-get($colTransp, primaryTransp);
 
         img{
-            width: 100%;
-            height: auto;
+            @include sizes(100%, auto);
             transition: all .5s;
 
             &:hover{
@@ -606,7 +598,7 @@ caption{
     }
 
     .card-header{
-        background-color: $primaryTransp;
+        background-color: map-get($colTransp, primaryTransp);
     }
 }
 /* contc */
@@ -617,7 +609,7 @@ caption{
     grid-area: cntc;
 
     form{
-        background-color: $primaryTransp;
+        background-color: map-get($colTransp, primaryTransp);
         text-align: center;
         width: 100%;
         font-size: 70%;
@@ -627,20 +619,18 @@ caption{
     }
 
     img{
-        width: 60%;
-        height: auto;
+        @include sizes(60%, auto);
         padding: 0.5%;
         border-radius: 3%;
-        background-color: $secondary;
+        background-color: map-get($mainCol, secondary);
         transition: all .5s;
     }
 }
 
 
 input, textarea{
-    color: $secondary;
-    background-color: $darkerPrimary;
-    border: 1px solid $secondary;
+    @include colAndBGCol(map-get($mainCol, secondary), map-get($mainCol, darkerPrimary));
+    border: 1px solid map-get($mainCol, secondary);
     border-radius: 5%;
     font-family: $primaryFont;
     padding: 1%;
@@ -651,9 +641,9 @@ input {
     transition: all .1s;
     &:hover{
         transform: scale(1.05,1.05);
-        color: $darkerPrimary;
-        background-image:linear-gradient(90deg, $secondary, $darkerSecondary); 
-        border: 1px solid $darkerPrimary;
+        color: map-get($mainCol, darkerPrimary);
+        background-image:linear-gradient(90deg, map-get($mainCol, secondary), map-get($mainCol, darkerSecondary)); 
+        border: 1px solid map-get($mainCol, darkerPrimary);
     }
 }
 
@@ -664,15 +654,15 @@ input {
 }
 
 .form-check-input{
-    background-color:$secondary;
+    background-color:map-get($mainCol, secondary);
     margin: 0% 1%;
     &:focus{
         box-shadow: none;
-        border-color: $secondary;
+        border-color: map-get($mainCol, secondary);
     }
     &:checked{
-        background-color:$darkerPrimary;
-        border-color: $secondary;
+        background-color:map-get($mainCol, darkerPrimary);
+        border-color: map-get($mainCol, secondary);
     }
 }
 
@@ -821,8 +811,7 @@ input {
             font-size: 70%;
         }
         img {
-            width: 40%;
-            height: auto;
+            @include sizes(40%, auto);
         }
     } 
 
@@ -838,8 +827,7 @@ input {
         article{
             flex-flow: row wrap;
             iframe{
-                width: 50%;
-                height: 90%;
+                @include sizes(50%, 90%);
             }
             img{
                 width: 45%;
@@ -891,10 +879,7 @@ input {
             max-width: fit-content;
         }
     }
-
-    /* footer */
-
-    
+   
 }
 
 @media screen and (min-width: 1024px) {

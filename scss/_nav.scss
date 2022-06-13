@@ -9,9 +9,9 @@ nav{
 
 
 .menu{
-    background-color: $primary;
+    background-color: map-get($mainCol, primary);
     padding: 1%;
-    border-bottom: 10px groove $secondary;
+    border-bottom: 10px groove map-get($mainCol, secondary);
     text-align: center;
     justify-content: space-evenly;
     align-items: center;
@@ -19,7 +19,7 @@ nav{
     li{
         display: inline;
         a{
-        color: $secondary;
+        color: map-get($mainCol, secondary);
         text-decoration: none;
         padding: 3% 15%;
         height: 25%;
@@ -31,40 +31,40 @@ nav{
         transition: all .2s;
 
         &:hover{
-            color: $darkerSecondary;
-            background-color: $darkerPrimary;
+            color: map-get($mainCol, darkerSecondary);
+            background-color: map-get($mainCol, darkerPrimary);
         }
         
         &:active{
-            background-color: $darkerSecondary;
-            color: $darkerPrimary;
+            background-color: map-get($mainCol, darkerSecondary);
+            color: map-get($mainCol, darkerPrimary);
         }
 
         }
         
         .actual{
-            color: $darkerSecondary;
-            background-color: $darkerPrimary;
-            border-bottom: 1px solid $darkerPrimary;
+            color: map-get($mainCol, darkerSecondary);
+            background-color: map-get($mainCol, darkerPrimary);
+            border-bottom: 1px solid map-get($mainCol, darkerPrimary);
         }
     }
 }
 
 .dropdown-menu{
-    background-color: $darkerPrimary;
+    background-color: map-get($mainCol, darkerPrimary);
     li{
         font-size: 70%;
     }
 }
 
 .btn-primary{
-    background-color:$primary;
+    background-color:map-get($mainCol, primary);
     border: none;
     border-radius: 50%;
     display: none;
     &:hover{
-        color: $darkerSecondary;
-        background-color: $darkerPrimary;
+        color: map-get($mainCol, darkerSecondary);
+        background-color: map-get($mainCol, darkerPrimary);
     }
 }
 
@@ -75,8 +75,8 @@ nav{
 .btn{
     &:focus{
     box-shadow: none;
-    color: $darkerSecondary;
-    background-color: $darkerPrimary;
+    color: map-get($mainCol, darkerSecondary);
+    background-color: map-get($mainCol, darkerPrimary);
 }
 }
 

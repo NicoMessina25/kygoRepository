@@ -1,9 +1,9 @@
 footer {
-    background-color: $primary;
+    background-color: map-get($mainCol, primary);
     padding: 1%;
     font-family: 'Montserrat', serif;
     font-size: 50%;
-    border-top: 10px groove $lighterPrimary;
+    border-top: 10px groove map-get($mainCol, lighterPrimary);
     justify-content: space-between;
     align-items: flex-end;
     grid-area: footer;
@@ -17,7 +17,7 @@ footer {
             margin: 4%;
             a{
                 &:hover{
-                background-color:$primary;
+                background-color:map-get($mainCol, primary);
                 }
             }
         }
@@ -29,7 +29,7 @@ footer {
             transition: all .5s;
             padding: 10%;
             border-radius: 30%;
-            background-image: linear-gradient(135deg, $lighterPrimary, $primary);
+            background-image: linear-gradient(135deg, map-get($mainCol, lighterPrimary), map-get($mainCol, primary));
 
             &:active{
                 padding: 15%;
@@ -42,28 +42,12 @@ footer {
     }
 }
 
-.youTube{
-   &:hover{
-        box-shadow: 2px 2px 5px 1px $youTube;
-    } 
-}
-
-.spotify{
-    &:hover{
-    box-shadow: 2px 2px 5px 1px $spotify;
+@each $red,$color in $colorRedSoc{
+    .#{$red}{
+        &:hover{
+            box-shadow: 2px 2px 5px 1px $color;
+        } 
     }
-}
-
-.twitter{
-    &:hover{
-        box-shadow: 2px 2px 5px 1px $twitter;
-        }
-}
-
-.instagram{
-    &:hover{
-        box-shadow: 2px 2px 5px 1px $instagram;
-        }
 }
 
 @media screen and (min-width: 768px) {

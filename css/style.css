@@ -141,8 +141,8 @@ img:hover {
   transform: scale(1.05, 1.05); }
 
 a img {
-  height: 70px;
   width: auto;
+  height: 70px;
   grid-area: logo;
   animation: aniLogo .5s alternate infinite; }
 
@@ -228,9 +228,10 @@ header {
   font-family: "Playfair Display", serif;
   font-size: 180%;
   font-weight: lighter;
+  margin: 2% 0% 0% 0%;
   padding: 1%;
-  margin-top: 2%;
   width: 100%;
+  height: auto;
   max-width: 180px;
   text-transform: uppercase;
   border: 3px solid #00CC99;
@@ -239,13 +240,13 @@ header {
   grid-area: title; }
 
 .mainSubTitle {
-  font-size: 130%;
-  font-family: "Montserrat", sans-serif;
   padding: 1%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 130%;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.75);
-  width: fit-content;
   max-width: 400px;
+  width: fit-content;
   height: 30px;
   grid-area: subtitle;
   text-align: center; }
@@ -254,36 +255,37 @@ header {
   grid-area: espacio; }
 
 /*General Main*/
-.subTitle {
-  font-size: 150%;
-  font-family: "Montserrat", sans-serif;
+.subTitle, .subTitle--smaller, .musSubTitle {
   font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  font-size: 150%;
   font-weight: bold;
   text-transform: uppercase;
   margin: 2%;
   width: 90%; }
 
-.subTitle--smaller {
+.subTitle--smaller, .musSubTitle {
   text-align: center;
   font-size: 150%;
   text-transform: capitalize; }
 
-.text {
-  font-family: "Montserrat", sans-serif;
-  padding: 2%;
+.text, .text--justify, .indexBio__text, .bioInf__text {
   margin: 2%;
-  font-size: 75%; }
-  .text a {
+  padding: 2%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 75%;
+  font-weight: inherit; }
+  .text a, .text--justify a, .indexBio__text a, .bioInf__text a {
     text-decoration: none;
     font-style: italic;
     transition: all .5s; }
-    .text a:hover {
+    .text a:hover, .text--justify a:hover, .indexBio__text a:hover, .bioInf__text a:hover {
       font-size: 105%; }
-    .text a:visited {
+    .text a:visited, .text--justify a:visited, .indexBio__text a:visited, .bioInf__text a:visited {
       color: #943ef5;
       text-decoration: underline; }
 
-.text--justify {
+.text--justify, .indexBio__text, .bioInf__text {
   text-align: justify; }
 
 .sect--blue {
@@ -303,11 +305,11 @@ header {
     .sect--green p a:hover {
       color: #07091B; }
 
-.link {
+.link, .link--green, .link--blue, .indexMus__link {
   text-decoration: none;
-  font-weight: bolder;
-  font-size: 75%;
   font-family: "Montserrat", sans-serif;
+  font-size: 75%;
+  font-weight: bolder;
   border-radius: 73px 73px 73px 73px;
   padding: 2%;
   text-align: center;
@@ -325,15 +327,15 @@ header {
   .link--green:active {
     transform: scale(1, 1); }
 
-.link--blue {
+.link--blue, .indexMus__link {
   color: #00CC99;
   background-color: #0A2347;
   transition: color .5s, transform 1s; }
-  .link--blue:hover {
+  .link--blue:hover, .indexMus__link:hover {
     transform: scale(1.2, 1.2);
     color: #07091B;
     background-image: linear-gradient(90deg, #00CC99, #1E9CA0); }
-  .link--blue:active {
+  .link--blue:active, .indexMus__link:active {
     transform: scale(1, 1); }
 
 .table {
@@ -353,9 +355,9 @@ header {
   .table .tdPremYNom {
     background-image: linear-gradient(90deg, #00CC99, rgba(10, 35, 71, 0)); }
   .table .tdFontfamily {
+    font-style: italic;
     font-family: "Playfair Display", serif;
     font-size: 250%;
-    font-style: italic;
     font-weight: bolder; }
 
 .table-hover tbody tr:hover {
@@ -377,12 +379,12 @@ caption {
   grid-area: indBio; }
 
 .indexBio__img {
-  padding: 1%;
   background-color: #00CC99;
   margin: 1%;
+  padding: 1%;
   border-radius: 25%;
-  height: 300px;
   width: auto;
+  height: 300px;
   transition: all .5s; }
 
 .indexBio__text {
@@ -410,8 +412,8 @@ caption {
   list-style: none;
   align-items: center;
   margin: 2%;
-  width: 100vw;
   max-width: 400px;
+  width: 100vw;
   height: auto;
   background-color: rgba(10, 35, 71, 0.15); }
   .indexOList li {
@@ -547,9 +549,10 @@ caption {
     font-size: 50%; }
 
 .fontMod {
+  font-style: italic;
   font-family: inherit;
   font-size: 150%;
-  font-style: italic; }
+  font-weight: inherit; }
   .fontMod span {
     font-size: 70%; }
 
@@ -645,14 +648,14 @@ input {
   a img {
     height: 200px; }
   /*General Main*/
-  .subTitle {
+  .subTitle, .subTitle--smaller, .musSubTitle {
     font-size: 300%; }
-  .subTitle--smaller {
+  .subTitle--smaller, .musSubTitle {
     font-size: 150%;
     text-align: left; }
-  .text {
+  .text, .text--justify, .indexBio__text, .bioInf__text {
     font-size: 100%; }
-  .link {
+  .link, .link--green, .link--blue, .indexMus__link {
     font-size: 100%; }
   /* indexBio */
   .indexBio {
@@ -742,8 +745,7 @@ input {
     font-size: 100%; }
   .contc img {
     width: 40%;
-    max-width: fit-content; }
-  /* footer */ }
+    max-width: fit-content; } }
 
 @media screen and (min-width: 1024px) {
   .bioPremYNom table {
@@ -756,14 +758,14 @@ input {
     font-size: 125%; }
   .mainSubTitle {
     font-size: 300%; }
-  .text {
+  .text, .text--justify, .indexBio__text, .bioInf__text {
     font-size: 125%; }
-  .link {
+  .link, .link--green, .link--blue, .indexMus__link {
     font-size: 125%; }
   /*General Main*/
-  .subTitle {
+  .subTitle, .subTitle--smaller, .musSubTitle {
     font-size: 350%; }
-  .subTitle--smaller {
+  .subTitle--smaller, .musSubTitle {
     font-size: 200%; }
   /*musTop*/
   .musTop table {
