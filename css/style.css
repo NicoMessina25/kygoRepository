@@ -276,14 +276,12 @@ header {
   font-size: 75%;
   font-weight: inherit; }
   .text a, .text--justify a, .indexBio__text a, .bioInf__text a {
-    text-decoration: none;
     font-style: italic;
     transition: all .5s; }
     .text a:hover, .text--justify a:hover, .indexBio__text a:hover, .bioInf__text a:hover {
       font-size: 105%; }
     .text a:visited, .text--justify a:visited, .indexBio__text a:visited, .bioInf__text a:visited {
-      color: #943ef5;
-      text-decoration: underline; }
+      color: #485099; }
 
 .text--justify, .indexBio__text, .bioInf__text {
   text-align: justify; }
