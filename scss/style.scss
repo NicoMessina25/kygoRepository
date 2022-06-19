@@ -1,4 +1,4 @@
-@import 'colors', 'footer','nav','fontFamilies', 'mixins';
+@import 'colors', 'mixins', 'fontFamilies', 'footer','nav';
 
 *{
     @include marPad(0,0);
@@ -147,6 +147,7 @@ header{
     background-color: map-get($colTransp, blackTransp);
     text-align: center;
     grid-area: title;
+    border-radius: 23px;
 }
 .mainSubTitle{
     padding: 1%;
@@ -156,6 +157,7 @@ header{
     @include sizes(fit-content, 30px);
     grid-area: subtitle;
     text-align: center;
+    border-radius: 23px;
 }
 
 .espacio{

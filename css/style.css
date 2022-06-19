@@ -1,8 +1,9 @@
 footer {
   background-color: #0A2347;
   padding: 1%;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 50%;
+  font-weight: 500;
   border-top: 10px groove #135673;
   justify-content: space-between;
   align-items: flex-end;
@@ -16,8 +17,8 @@ footer {
       footer .menu li a:hover {
         background-color: #0A2347; }
     footer .menu img {
-      height: 25px;
       width: 25px;
+      height: 25px;
       animation: none;
       transition: all .5s;
       padding: 10%;
@@ -46,8 +47,8 @@ footer {
     footer .menu {
       flex-wrap: nowrap; }
       footer .menu img {
-        height: 50px;
-        width: 50px; }
+        width: 50px;
+        height: 50px; }
     footer a img {
       height: 100px; } }
 
@@ -60,12 +61,12 @@ nav {
 
 .menu {
   background-color: #0A2347;
-  padding: 1%;
   border-bottom: 10px groove #00CC99;
   text-align: center;
   justify-content: space-evenly;
   align-items: center;
-  margin: 0; }
+  margin: 0;
+  padding: 1%; }
   .menu li {
     display: inline; }
     .menu li a {
@@ -76,15 +77,16 @@ nav {
       border-radius: 73px 73px 73px 73px;
       border: none;
       text-transform: uppercase;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-size: 50%;
+      font-weight: 500;
       transition: all .2s; }
       .menu li a:hover {
         color: #1E9CA0;
         background-color: #07091B; }
       .menu li a:active {
-        background-color: #1E9CA0;
-        color: #07091B; }
+        color: #07091B;
+        background-color: #1E9CA0; }
     .menu li .actual {
       color: #1E9CA0;
       background-color: #07091B;
@@ -111,6 +113,10 @@ nav {
   box-shadow: none;
   color: #1E9CA0;
   background-color: #07091B; }
+  .btn:focus:active {
+    box-shadow: none;
+    color: #07091B;
+    background-color: #1E9CA0; }
 
 @media screen and (min-width: 768px) {
   nav {
@@ -237,7 +243,8 @@ header {
   border: 3px solid #00CC99;
   background-color: rgba(0, 0, 0, 0.75);
   text-align: center;
-  grid-area: title; }
+  grid-area: title;
+  border-radius: 23px; }
 
 .mainSubTitle {
   padding: 1%;
@@ -249,7 +256,8 @@ header {
   width: fit-content;
   height: 30px;
   grid-area: subtitle;
-  text-align: center; }
+  text-align: center;
+  border-radius: 23px; }
 
 .espacio {
   grid-area: espacio; }

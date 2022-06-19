@@ -1,8 +1,7 @@
 footer {
     background-color: map-get($mainCol, primary);
     padding: 1%;
-    font-family: 'Montserrat', serif;
-    font-size: 50%;
+    @include fonts($primaryFont, 50%, 500);
     border-top: 10px groove map-get($mainCol, lighterPrimary);
     justify-content: space-between;
     align-items: flex-end;
@@ -23,8 +22,7 @@ footer {
         }
 
         img{
-            height: 25px;
-            width: 25px;
+            @include sizes(25px,25px);
             animation: none;
             transition: all .5s;
             padding: 10%;
@@ -56,8 +54,7 @@ footer {
         .menu{
             flex-wrap: nowrap;
             img{
-                height: 50px;
-                width: 50px;
+                @include sizes(50px, 50px);
             }
         }
 
