@@ -24,7 +24,7 @@ nav{
         padding: 3% 15%;
         height: 25%;
         border-radius: 73px 73px 73px 73px;
-        border: none;
+        border:none;
         text-transform: uppercase;
         @include fonts($primaryFont, 50%, 500);
         transition: all .2s;
@@ -41,7 +41,7 @@ nav{
         
         .actual{
             @include colAndBGCol(map-get($mainCol, darkerSecondary), map-get($mainCol, darkerPrimary));
-            border-bottom: 1px solid map-get($mainCol, darkerPrimary);
+            border-bottom: 1px solid map-get($mainCol, darkerSecondary);
         }
     }
 }
